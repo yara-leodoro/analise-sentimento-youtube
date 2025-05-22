@@ -20,7 +20,7 @@ sentimentos = st.multiselect(
     default=sentimentos_validos
 )
 
-score_min = st.slider("Score mínimo:", min_value=0.0, max_value=1.0, value=0.0, step=0.05)
+score_min = st.slider("Score mínimo:", min_value=-1.0, max_value=1.0, value=-1.0, step=0.05)
 
 df_filtrado = df[(df["Sentimento"].isin(sentimentos)) & (df["Score"] >= score_min)]
 

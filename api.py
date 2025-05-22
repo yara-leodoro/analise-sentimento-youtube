@@ -10,7 +10,7 @@ api_key =  os.getenv("API_KEY")  # Substitua pela sua chave de API do YouTube
 youtube = build('youtube', 'v3', developerKey=api_key)
 
 video_id = os.getenv("VIDEO_ID")  # Substitua pelo ID do vídeo que você deseja analisar
-max_comments = 50
+max_comments = 300
 
 video_info = youtube.videos().list(part="snippet", id=video_id).execute()
 video_snippet = video_info["items"][0]["snippet"]
